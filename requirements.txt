@@ -1,0 +1,5 @@
+spacy
+scikit-learn
+matplotlib
+seaborn
+pandas
