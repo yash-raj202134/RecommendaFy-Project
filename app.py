@@ -19,14 +19,14 @@ train_data = pd.read_csv("data/clean_data.csv")
 
 # List of predefined image URLs
 random_image_urls = [
-    "recommendafy/web/static/images/img_1.png",
-    "recommendafy/web/static/images/img_2.png",
-    "recommendafy/web/static/images/img_3.png",
-    "recommendafy/web/static/images/img_4.png",
-    "recommendafy/web/static/images/img_5.png",
-    "recommendafy/web/static/images/img_6.png",
-    "recommendafy/web/static/images/img_7.png",
-    "recommendafy/web/static/images/img_8.png",
+    "static/images/img_1.png",
+    "static/images/img_2.png",
+    "static/images/img_3.png",
+    "static/images/img_4.png",
+    "static/images/img_5.png",
+    "static/images/img_6.png",
+    "static/images/img_7.png",
+    "static/images/img_8.png",
 ]
 
 @app.route("/")
