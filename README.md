@@ -27,7 +27,9 @@ Throughout the development, we utilize Python libraries such as NumPy, pandas, s
 
 ## Integrating with Flask and E-Commerce Website
 
-After building the recommendation system, the next step is integrating it with a Flask web application to provide a user-friendly interface. Key features include:
+After building the recommendation system, the next step is integrating it with a Flask web application to provide a user-friendly interface. 
+
+Scope of work include:
 
 - **User Registration**: Allow users to create accounts and log in.
 - **Product Browsing**: Enable users to explore products with essential information, including images, descriptions, prices, and ratings.
@@ -37,8 +39,8 @@ After building the recommendation system, the next step is integrating it with a
 - **User Authentication and Session Management**: Ensure secure and seamless browsing experiences.
 
 Flask's routing capabilities will be leveraged to handle user requests and render dynamic web pages with personalized recommendations.
-## Website preview
-![screenshots](web_screenshot\Screenshot1.png)
+#### Website preview
+![](web_screenshot\Screenshot1.png)
 ![](web_screenshot\Screenshot2.png)
 ![](web_screenshot\Screenshot3.png)
 ## Conclusion
