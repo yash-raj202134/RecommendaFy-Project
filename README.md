@@ -38,7 +38,7 @@ After building the recommendation system, the next step is integrating it with a
 
 Flask's routing capabilities will be leveraged to handle user requests and render dynamic web pages with personalized recommendations.
 ## Website preview
-![](web_screenshot\Screenshot1.png)
+![screenshots](web_screenshot\Screenshot1.png)
 ![](web_screenshot\Screenshot2.png)
 ![](web_screenshot\Screenshot3.png)
 ## Conclusion
