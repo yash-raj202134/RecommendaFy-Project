@@ -37,7 +37,10 @@ After building the recommendation system, the next step is integrating it with a
 - **User Authentication and Session Management**: Ensure secure and seamless browsing experiences.
 
 Flask's routing capabilities will be leveraged to handle user requests and render dynamic web pages with personalized recommendations.
-
+## Website preview
+![](web_screenshot\Screenshot1.png)
+![](web_screenshot\Screenshot2.png)
+![](web_screenshot\Screenshot3.png)
 ## Conclusion
 
 Building an e-commerce recommendation system with Flask and machine learning techniques offers numerous benefits, including enhanced user engagement, increased sales, and improved customer satisfaction. By leveraging content-based, collaborative filtering, hybrid, and multi-model recommendation approaches, businesses can deliver personalized product suggestions tailored to individual user preferences. Integrating the recommendation system with a Flask-based e-commerce website provides a seamless shopping experience, empowering users to discover relevant products efficiently.
