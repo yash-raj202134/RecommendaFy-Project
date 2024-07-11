@@ -36,7 +36,7 @@ Scope of work include:
 - **Search Functionality**: Implement search features to help users find specific products.
 - **Recommendation Display**: Show personalized product recommendations.
 - **User Feedback**: Allow users to provide feedback, such as ratings and likes, to improve future recommendations.
-- **User Authentication and Session Management**: Ensure secure and seamless browsing experiences.
+- **User Authentication and Session Management**: Ensure secure and seamless browsing experiences with database integration.
 
 Flask's routing capabilities will be leveraged to handle user requests and render dynamic web pages with personalized recommendations.
 #### Website preview
