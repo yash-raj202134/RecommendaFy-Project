@@ -2,7 +2,7 @@ from flask import Flask, request, render_template  # type: ignore
 import pandas as pd # type: ignore
 import random
 from recommendafy.utils import truncate
-
+from flask_sqlalchemy import SQLAlchemy # type: ignore
 
 
 
@@ -12,6 +12,11 @@ app = Flask(__name__)
 trending_products = pd.read_csv("data/trending_products.csv")
 train_data = pd.read_csv("data/clean_data.csv")
 
+# database configuration---------------------------------------
+app.secret_key = "alskdjfwoeieiurlskdjfslkdjf"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:@localhost/ecom"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 
 # routes ----------------------------------------------------

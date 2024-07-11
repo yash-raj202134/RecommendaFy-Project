@@ -4,3 +4,5 @@ matplotlib
 seaborn
 pandas
 flask
+flask_sqlalchemy
+mysqlclient
