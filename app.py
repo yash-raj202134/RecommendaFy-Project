@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template  # type: ignore
 import pandas as pd # type: ignore
 import random
-from recommendafy.utils import truncate
+from recommendafy.utils import truncate , content_based_recommendations
 from flask_sqlalchemy import SQLAlchemy # type: ignore
 
 
@@ -58,13 +58,13 @@ def index():
                            random_price = random.choice(price))
 
 
-# routes
+# routes main page
 @app.route("/main")
 def main():
     return render_template('main.html')
 
 
-# routes
+# route index page
 @app.route("/index")
 def indexredirect():
     # Create a list of random image URLs for each product
@@ -74,7 +74,7 @@ def indexredirect():
                            random_product_image_urls = random_product_image_urls,
                            random_price = random.choice(price))
 
-# Route for signup page
+# Route for signup page..
 @app.route("/signup", methods=['POST','GET'])
 def signup():
     if request.method=='POST':
@@ -94,7 +94,7 @@ def signup():
                                signup_message='User signed up successfully!'
                                )
     
-# Route for signin page
+# Route for signin page..
 @app.route('/signin', methods=['POST', 'GET'])
 def signin():
     if request.method == 'POST':
@@ -112,6 +112,28 @@ def signin():
                                signup_message='User signed in successfully!'
                                )
 
+
+# Route for recommendations..
+@app.route("/recommendations", methods=['POST', 'GET'])
+def recommendations():
+    if request.method == 'POST':
+        prod = request.form.get('prod')
+        nbr = int(request.form.get('nbr'))
+        content_based_rec = content_based_recommendations(train_data, prod, top_n=nbr)
+
+        if content_based_rec.empty:
+            message = "No recommendations available for this product."
+            return render_template('main.html', message=message)
+        else:
+            # Create a list of random image URLs for each recommended product
+            random_product_image_urls = [random.choice(random_image_urls) for _ in range(len(trending_products))]
+            print(content_based_rec)
+            print(random_product_image_urls)
+
+            price = [40, 50, 60, 70, 100, 122, 106, 50, 30, 50]
+            return render_template('main.html', content_based_rec=content_based_rec, truncate=truncate,
+                                   random_product_image_urls=random_product_image_urls,
+                                   random_price=random.choice(price))
 
 
 
