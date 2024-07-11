@@ -1,6 +1,6 @@
-import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+import pandas as pd # type: ignore
+from sklearn.feature_extraction.text import TfidfVectorizer # type: ignore
+from sklearn.metrics.pairwise import cosine_similarity # type: ignore
 
 # Function to truncate product name
 def truncate(text, length):
